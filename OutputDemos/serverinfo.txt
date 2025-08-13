@@ -1,0 +1,64 @@
+
+ServerName        : SRV01
+Status            : Online
+OSName            : Windows Server 2022 Standard
+OSVersion         : 10.0.20348
+Manufacturer      : HP
+Model             : PowerEdge R740
+Processor         : Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz
+LogicalCores      : 8
+TotalMemoryGB     : 27
+FreeMemoryGB      : 11
+MemoryUsedPercent : 59.26
+TotalDiskGB       : 616
+FreeDiskGB        : 91
+DiskUsedPercent   : 85.23
+IPAddress         : 192.168.125.193
+MACAddress        : 48-DE-10-DB-78-2B
+LastBootTime      : 7/13/2025 4:25:49 PM
+UptimeDays        : 31
+RunningServices   : 94
+StoppedServices   : 15
+
+ServerName        : SRV02
+Status            : Online
+OSName            : Windows Server 2022 Standard
+OSVersion         : 10.0.20348
+Manufacturer      : Lenovo
+Model             : PowerEdge R740
+Processor         : Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz
+LogicalCores      : 8
+TotalMemoryGB     : 37
+FreeMemoryGB      : 6
+MemoryUsedPercent : 83.78
+TotalDiskGB       : 379
+FreeDiskGB        : 112
+DiskUsedPercent   : 70.45
+IPAddress         : 192.168.101.222
+MACAddress        : 79-22-E4-2F-FC-4C
+LastBootTime      : 6/16/2025 4:25:49 PM
+UptimeDays        : 58
+RunningServices   : 77
+StoppedServices   : 12
+
+ServerName        : DC01
+Status            : Online
+OSName            : Windows Server 2019 Datacenter
+OSVersion         : 10.0.17763
+Manufacturer      : HP
+Model             : PowerEdge R740
+Processor         : Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz
+LogicalCores      : 8
+TotalMemoryGB     : 11
+FreeMemoryGB      : 6
+MemoryUsedPercent : 45.45
+TotalDiskGB       : 726
+FreeDiskGB        : 161
+DiskUsedPercent   : 77.82
+IPAddress         : 192.168.125.114
+MACAddress        : F7-93-A5-35-E7-A5
+LastBootTime      : 6/20/2025 4:25:49 PM
+UptimeDays        : 54
+RunningServices   : 92
+StoppedServices   : 23
+

@@ -2,6 +2,7 @@
 # Practical Demo Script
 
 get-service -name bits
+get-service -name bits | select *
 get-service -name bits | Out-Default
 Write-Output
 
@@ -153,10 +154,10 @@ function Get-ServerInfo {
     }
 }
 #endregion
-$serverinfo = Get-ServerInfo 
+$serverinfo = Get-DemoServerInfo 
 
 
-$serverinfo | Out-File C:\Scripts\SQLSATATL25\OutputDemos\serverinfo.txt
+$serverinfo | Out-File C:\Scripts\TM-MSHQ25\OutputDemos\serverinfo.txt
 $serverinfo | export-csv .\serverinfo.csv
 
 #region Demo Functions
@@ -225,7 +226,7 @@ function Start-DemoConsoleFormatting {
     Write-Host "------------------------------" -ForegroundColor Cyan
     
     # Get server information
-    $servers = Get-ServerInfo 
+    $servers = get-DemoServerInfo 
     
     # Show default output (ugly)
     Write-Host "`nDefault Output (Ugly):" -ForegroundColor Yellow
@@ -300,7 +301,7 @@ function Start-DemoExportCSV {
         @{Name="TotalMemoryGB"; Expression={$_.TotalMemoryGB}},
         @{Name="FreeMemoryGB"; Expression={$_.FreeMemoryGB}},
         @{Name="MemoryUsedPercent"; Expression={$_.MemoryUsedPercent}},
-        @{Name="TotalDiskGB"; Expression={$_.TotalDiskGB}},
+        @{Name="TotalDiskGB"; Expression={$_.TotalDiskGB }},
         @{Name="FreeDiskGB"; Expression={$_.FreeDiskGB}},
         @{Name="DiskUsedPercent"; Expression={$_.DiskUsedPercent}},
         IPAddress, UptimeDays,
@@ -337,7 +338,7 @@ function Start-DemoExportExcel {
 Install-Module -Name ImportExcel -Scope CurrentUser -Force
 
 # Get server information
-$servers = Get-ServerInfo
+$servers = get-DemoServerInfo
 
 # Define the Excel path
 $excelPath = "$PWD\ServerInventory.xlsx"
@@ -414,7 +415,7 @@ function Start-DemoHTMLReport {
     Write-Host "---------------------------------" -ForegroundColor Cyan
     
     # Get server information
-    $servers = Get-ServerInfo
+    $servers = get-DemoServerInfo
     
     # Define external CSS file path
     $cssPath = "$PWD\ServerReport.css"
@@ -644,7 +645,7 @@ function Start-DemoConvertToJSON {
     Write-Host "------------------------" -ForegroundColor Cyan
     
     # Get server information
-    $servers = Get-ServerInfo
+    $servers = get-DemoServerInfo
     
     # Create a simplified version for JSON export
     $jsonData = $servers | ForEach-Object {

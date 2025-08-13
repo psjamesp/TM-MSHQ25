@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status Report</title>
+    <link rel="stylesheet" href="ServerReport.css">
+</head>
+<body>
+    <h1>Server Status Report</h1>
+    <div class="timestamp">Generated on 2025-08-13 16:34:12</div>
+    
+    <div class="container">
+        <h2>Summary</h2>
+        <div class="summary">
+            <div class="summary-box">
+                <strong>Total Servers:</strong> 3<br>
+                <strong>Online:</strong> 1<br>
+                <strong>Offline:</strong> 2<br>
+                <strong>Error:</strong> 0
+            </div>
+            <div class="summary-box">
+                <strong>Avg Memory Usage:</strong> 75.67%<br>
+                <strong>Servers with High Memory:</strong> 2<br>
+                <strong>Avg Disk Usage:</strong> 45.72%<br>
+                <strong>Servers with High Disk:</strong> 0
+            </div>
+        </div>
+        
+        <h2>Server Details</h2>
+        <table>
+            <tr>
+                <th>Server Name</th>
+                <th>Status</th>
+                <th>OS</th>
+                <th>Hardware</th>
+                <th>IP Address</th>
+                <th>Memory Usage</th>
+                <th>Disk Usage</th>
+                <th>Uptime</th>
+            </tr>
+            <tr>
+    <td>SRV01</td>
+    <td class="status-offline">Offline</td>
+    <td>Windows Server 2022 Standard</td>
+    <td>Dell Inc. PowerEdge R740</td>
+    <td>192.168.252.61</td>
+    <td class="warning">4 / 25 GB (84%)</td>
+    <td class="">603 / 947 GB (36.33%)</td>
+    <td>57 days</td>
+</tr><tr>
+    <td>SRV02</td>
+    <td class="status-online">Online</td>
+    <td>Windows Server 2022 Standard</td>
+    <td>Dell Inc. PowerEdge R740</td>
+    <td>192.168.53.36</td>
+    <td class="critical">3 / 43 GB (93.02%)</td>
+    <td class="">66 / 194 GB (65.98%)</td>
+    <td>35 days</td>
+</tr><tr>
+    <td>DC01</td>
+    <td class="status-offline">Offline</td>
+    <td>Windows Server 2019 Datacenter</td>
+    <td>Dell Inc. PowerEdge R740</td>
+    <td>192.168.89.118</td>
+    <td class="">14 / 28 GB (50%)</td>
+    <td class="">316 / 485 GB (34.85%)</td>
+    <td>6 days</td>
+</tr>
+        </table>
+    </div>
+    
+    <div class="footer">
+        Server Status Report | IT Department | For internal use only
+    </div>
+</body>
+</html>
